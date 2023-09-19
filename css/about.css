@@ -116,6 +116,22 @@ footer{
   align-items:flex-end;
   justify-items: center;
 }
+.set2{
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  align-items:flex-end;
+  justify-items: center;
+}
+
+ .set2 .txt3{
+    color: white;
+    font-size: 50px;
+  }
+
+  .set2 .txt4{
+    color: white;
+    font-size: 50px;
+  }
 
 .set:nth-child(2n + 1) .row{
   grid-column: 2/3;
@@ -211,8 +227,6 @@ footer{
 }
 
 .top_about{
-  padding-top: 8%;;
-  padding-bottom: 20%;
   display: grid;
   justify-items: start;
   padding-left: 25%;
