@@ -1,0 +1,308 @@
+/* navlinks */
+.nav_links{
+  padding-top: 2%;
+  text-align: right;
+  display: flex;
+  justify-content:space-around;
+  list-style-type: none;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+body {
+  background-repeat: no-repeat, repeat-y;
+  background-image: url(../img/Ryan_back.jpg);
+  background-color:#021245;
+  /* background-image: url(../img/background.png), url(../img/background2.png); */
+  /* background-image: url("https://uploads-ssl.webflow.com/5f7c29021be3c410facedbf1/5fd7597fe589fae49c1235ca_bg5.svg"); */
+}
+
+  .nav_links:nth-child(1){
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+  li.about_me{
+    color: blueviolet;
+  }
+
+  .about_me{
+    padding-top: 1%;
+  }
+  
+  .projects{
+    padding-top: 1%;
+  }
+
+  /* Only for nav when home tab isnt the logo */
+  .home{
+    padding-top: 1%;
+  }
+
+
+  h1{
+    font-size: 130px;
+    color: #000000;
+    padding-top: 2%;
+    animation: about_top 1s ease-out;
+  }
+
+
+/* Move it (define the animation) for my story*/
+@keyframes about_top {
+ 0%   { 
+ transform: translateX(-50%); 		
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+
+
+footer{
+  text-align: center;
+  bottom: 0;
+  color: white;
+}
+
+.skip-content{
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+/* this will run when it is tabed */
+.skip-content:focus{
+  margin-left:  48%;
+  margin-top: 50px;
+  border: rgb(0, 0, 0) 5px solid;
+  padding: 5px;
+  position: static;
+  overflow: visible;
+}
+
+
+
+/* Text that goes with pictures */
+.row_text{
+  text-align: center;
+  padding-top: 150px;
+  font-size: 75px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding-top: 15%;
+  padding-bottom: 10%;
+  color: white;
+}
+
+/* Smaller text under the heading/larger text */
+.txt:nth-child(2){
+  font-size: medium;
+}
+
+.txt2:nth-child(2){
+  font-size: medium;
+}
+
+
+
+
+
+/* Grid style for switching picture and text location */
+.set{
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  align-items:flex-end;
+  justify-items: center;
+}
+
+.set:nth-child(2n + 1) .row{
+  grid-column: 2/3;
+}
+.set:nth-child(2n + 1) .row_text{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+/* image style */
+.set:nth-child(1) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(178, 241, 168)
+}
+.set:nth-child(2) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(95, 62, 8)
+}
+.set:nth-child(3) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(118, 10, 151)
+}
+.set:nth-child(4) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(84, 80, 80)
+}
+.set:nth-child(5) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(88, 143, 190)
+}
+.set:nth-child(6) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(131, 186, 228)
+}
+.set:nth-child(7) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(255, 200, 0)
+}
+.set:nth-child(8) .row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(27, 82, 16)
+}
+.set:nth-child(9).row img{
+  margin-bottom: 30px;
+  border: 10px solid rgb(116, 27, 57)
+}
+
+
+/* /* Javascript for fading */
+.row{
+  position: relative;
+  transform: translateY(0px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.row.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Javascript for fading left */
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Javascript for fading rigth */
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.top_about{
+  padding-top: 8%;;
+  padding-bottom: 20%;
+  display: grid;
+  justify-items: start;
+  padding-left: 25%;
+  font-style: italic;
+  }
+
+
+/* when below 1300 */
+  /* grid styling */
+  .set{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+  }
+
+  .set:nth-child(2n + 1) .row{
+    grid-column: 2/3;
+  }
+  .set:nth-child(2n) .row{
+    grid-column: 2/3;
+  }
+
+  .set:nth-child(2n + 1) .row_text{
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+
+  .row{
+    grid-column: 1/3;
+  }
+  .row_text{
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  
+@media (min-width: 1200px) {
+  /* Grid style for switching picture and text location */
+  .set{
+    grid-template-columns: 50% auto;
+    display: grid;
+    align-items:flex-end;
+    justify-items: center;
+  }
+  .row_text{
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .set:nth-child(2n) .row{
+    grid-column: 1/3;
+  }
+
+.set:nth-child(2n + 1) .row{
+  grid-column: 2/3;
+}
+.set:nth-child(2n + 1) .row_text{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+  }
+
+
+@media (min-width: 800px) {
+/* my story style */
+.top_about{
+  padding-top: 8%;;
+  padding-bottom: 20%;
+  font-style: italic;
+  }
+}
+
+
+
+/* reduced motion */
+@media (prefers-reduced-motion) {
+  .active.fade-right {
+    animation: none;
+  }
+  .active.fade-left {
+    animation: none
+  }
+  h1{
+    font-size: 130px;
+    color: #000000;
+    padding-top: 2%;
+    animation: none;
+  }
+}
+
+
+
+
+
+
+ 
